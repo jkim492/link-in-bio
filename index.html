@@ -1,36 +1,126 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset ="UTF-8">
+    <meta charset ="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link-in-bio</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
     <style>
-      * {
+      /* {
         border: 1px red dashed;
+      } */
+      html {
+        min-height: 100%;
       }
+
+      body {
+        min-height: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background: linear-gradient(225deg, #ffc480, #dcc474, #b8c26f, #93be70, #6fb673, #4bac78, #299e7b, #078f7d); /* made at https://learnui.design/tools/gradient-generator.html */
+        color: rgba(255, 255, 255, 1.0);
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+      
+      a {
+        color: rgba(255, 255, 255, 1.0);
+        text-decoration: none;
+      }
+
+      .item {
+        background-color: rgba(149, 123, 173, 0.5);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        border-radius: 1000px;
+        padding: 5px;
+        padding-right: 53px;
+        box-shadow: 4px 4px 10px 0px rgba(122,32,122,0.5);
+      }
+      
+      .main-container {
+        max-width: 640px;
+        margin: auto;
+      }
+
+      .avatar-image {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border-radius: 128px;
+      }
+
+      .thumbnail {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 48px;
+      }
+
+      .image-row {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .name-row {
+        margin-bottom: 30px;
+        text-align: center;
+        font-family: 'Cabin', sans-serif;
+        font-size: 24px;
+        font-weight: 900;
+      }
+
+      .social-icons-row {
+         margin-bottom: 30px;
+         display: flex;
+         justify-content: space-around;
+      }
+
+      .link-text {
+        text-align: center;
+        flex-grow: 1;
+      }
+
     </style>
   </head>
   <body>
     <div class="main-container">
+
       <div class="image-row">
-        Image row
+        <img class="avatar-image" src="images/stock_image.jpg" alt="stock image">
       </div>
+
       <div class="name-row">
-        Name row
+        Jae Kim
       </div>
+      
       <div class="social-icons-row">
-        Social icons row
+        <a href="https://github.com/jkim492" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://github.com/jkim492" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/jkim492" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://github.com/jkim492" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
       </div>
+
       <div class="links-row">
         <div class="item">
-          First link
+          <img class="thumbnail" src="/images/stock_image.jpg" alt="stock_image">
+          <a class="link-text" href="https://unsplash.com/" target="_blank">
+            Unsplash
+          </a>
         </div>
         <div class="item">
-          Second link
-        </div>
-        <div class="item">
-          Third link
-        </div>
-        <div class="item">
-          Etc
+          <img class="thumbnail" src="/images/stock_image.jpg" alt="stock_image">
+          <a class="link-text" href="https://unsplash.com/" target="_blank">
+            Unsplash
+          </a>
         </div>
       </div> <!-- links row-->
     </div> <!-- main-container row-->
